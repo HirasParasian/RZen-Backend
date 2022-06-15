@@ -2,10 +2,11 @@ const users = require("express").Router()
 // const { verifyUser } = require('../helpers/auth');
 const cors = require('cors');
 
-const { readUsers,
+const { readUsers,createUsers,
 } = require("../controllers/users")
 
 users.get("/",cors(), readUsers)
+users.post("/",cors(), createUsers)
 
 
 
